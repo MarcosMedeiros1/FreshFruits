@@ -1,0 +1,327 @@
+/* RESET CSS */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Menu */
+.menu-bg {
+  background-color: #fff;
+}
+
+.menu {
+  padding: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu a {
+  color: #000;
+}
+
+.menu-logo a {
+  font-size: 2.25em;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.menu-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-nav ul li + li {
+  margin-left: 10px;
+}
+
+.menu-nav a {
+  font-size: 1.25em;
+  display: block;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+.menu-nav a:hover {
+  color: #000;
+  background-color: #c6f50f;
+  border-radius: 5px;
+}
+
+/* Sobre */
+.sobre-bg {
+  background-color: #c6f50f;
+}
+
+.sobre {
+  padding: 40px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sobre-info {
+  flex: 2 1 300px;
+  margin: 0 10px;
+}
+
+.sobre-info h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.sobre-info p {
+  font-size: 1.25em;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  color: #606060;
+}
+
+.sobre-img {
+  flex: 1 1 200px;
+  flex-wrap: nowrap;
+  margin: 10px;
+  max-width: 200px;
+}
+
+/* Combos */
+.combos {
+  margin: 40px auto;
+}
+
+.combos-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.combos h1 {
+  font-size: 3em;
+  margin: 0 10px;
+}
+
+.combos-item h2 {
+  font-size: 3.5em;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: 1px;
+  z-index: 1;
+}
+
+.combos h3 {
+  margin: 0 10px 20px;
+}
+
+.btn-combo {
+  position: relative;
+}
+
+.btn-combo::before {
+  content: "";
+  position: absolute;
+  left: -0.1px;
+  right: -0.1px;
+  bottom: 0;
+  height: 80%;
+  transform: scaleY(0.3);
+  transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+  transform-origin: bottom;
+  background-color: #c6f50f;
+  opacity: 0.4;
+}
+
+.btn-combo:hover::before {
+  transform: scaleY(1);
+}
+
+.combos-item {
+  flex: 1 1 170px;
+  margin: 10px;
+  position: relative;
+}
+
+.combos-item::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  margin-top: -150px;
+  height: 150px;
+  width: 100%;
+  content: "";
+}
+
+.red {
+  border-bottom: 8px solid #c6f50f;
+  border-image: linear-gradient(820deg, #d54aff, #ff0000) 1;
+}
+
+.orange {
+  border-bottom: 8px solid #c6f50f;
+  border-image: linear-gradient(70deg, #ff0000, #ffd500) 1;
+}
+
+.blue {
+  border-bottom: 8px solid #c6f50f;
+  border-image: linear-gradient(110deg, #6200ff, #e32be3) 1;
+}
+
+/* Preço */
+.assinaturas {
+  background-color: #f7f7f7;
+}
+
+.assinaturas-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.assinaturas h1 {
+  font-size: 3em;
+  margin: 0 10px;
+  padding-top: 20px;
+}
+
+.assinatura-valor {
+  flex: 1;
+  background-color: #fff;
+  padding: 10px;
+  margin: 20px 10px;
+  border: 5px solid #c6f50f;
+}
+
+.assinatura-valor h2 {
+  font-size: 3em;
+  color: #000;
+  text-align: center;
+}
+
+.assinatura-valor h2::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  margin: 65px 30px 0;
+  border-top: 3px solid #a4a4a4;
+}
+
+.assinatura-valor span {
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  font-size: 3em;
+}
+
+.assinatura-valor ul {
+  max-width: 300px;
+  margin: 0 auto;
+  font-size: 1.25em;
+  color: #7c7c7c;
+}
+
+.assinatura-valor li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.assinatura-valor button,
+.contato-form button {
+  margin: 20px auto;
+  font-size: 2em;
+  display: block;
+  border-radius: 5px;
+  padding: 10px 60px;
+  background: #c6f50f;
+  transition: 0.2s;
+}
+
+.assinatura-valor button:hover,
+.contato-form button:hover {
+  transform: scale(1.05);
+}
+
+/* Contato */
+.contato {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contato h1 {
+  margin: 0 20px;
+  font-size: 2em;
+}
+
+.contato-form {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contato-form input,
+textarea {
+  flex: 1;
+  font-size: 1.25em;
+  border: 3px solid #c6f50f;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  background: #c6f50f;
+  height: 100px;
+}
+
+.footer p {
+  flex: 1;
+  text-align: center;
+  font-size: 2em;
+}
