@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,11 +16,12 @@
   <header class="menu-bg">
     <div class="menu container">
       <div class="menu-logo">
-        <a href="#">FreshFruits</a>
+        <a href="index.html">FreshFruits</a>
       </div>
       <nav class="menu-nav">
         <ul>
           <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
           <li><a href="#combos">Combos</a></li>
           <li><a href="#assinaturas">Planos de assinatura</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -28,88 +30,89 @@
     </div>
   </header>
 
-  <section class="sobre-bg">
-    <div class="sobre container" id="sobre">
-      <div class="sobre-info">
-        <h1>Frutas frescas, livres de agrotóxicos</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, odio eu tristique bibendum, ligula nunc sagittis augue, ac consequat turpis diam sit amet ante.
-        </p>
-      </div>
-      <div class="sobre-img">
-        <img src="img/sobre1.jpg" alt="Sobre-1">
-      </div>
-      <div class="sobre-img">
-        <img src="img/sobre2.jpg" alt="Sobre-2">
-      </div>
-    </div>
-  </section>
-
-  <section class="combos container" id="combos">
-    <h1>Combos</h1>
-    <h3>Escolha um dos nossos combos ou <button class="btn-combo">crie seu combo!</button></h3>
-    <div class="combos-container">
-      <div class="combos-item red">
-        <a href="#">
-          <img src="img/combo1.jpg" alt="Combo Red">
-          <h2>Combo Red</h2>
-        </a>
-      </div>
-
-      <div class="combos-item orange">
-        <a href="#">
-          <img src="img/combo2.jpg" alt="Combo Orange">
-          <h2>Combo Orange</h2>
-        </a>
-      </div>
-
-      <div class="combos-item blue">
-        <a href="#">
-          <img src="img/combo3.jpg" alt="Combo Purple">
-          <h2>Combo Purple</h2>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="assinaturas" id="assinaturas">
-    <div class="container">
-      <h1>Planos de assinatura mensal</h1>
-      <div class="assinaturas-container">
-        <div class="assinatura-valor">
-          <h2>Seed</h2>
-          <span>R$ 49</span>
-          <ul>
-            <li>> Duas entregas no mês</li>
-            <li>> Escolha até dois combos</li>
-          </ul>
-          <button>Assinar</button>
+  <main>
+    <section class="sobre-bg">
+      <div class="sobre container" id="sobre">
+        <div class="sobre-info">
+          <h1>Frutas frescas, livres de agrotóxicos</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, odio eu tristique bibendum, ligula nunc sagittis augue, ac consequat turpis diam sit amet ante.
+          </p>
         </div>
-
-        <div class="assinatura-valor">
-          <h2>Fruit</h2>
-          <span>R$ 89</span>
-          <ul>
-            <li>> Quatro entregas no mês</li>
-            <li>> Escolha até quatro combos</li>
-            <li>> Brindes exclusivos</li>
-          </ul>
-          <button>Assinar</button>
+        <div class="sobre-img">
+          <img src="img/sobre1.jpg" alt="Sobre-1">
+        </div>
+        <div class="sobre-img">
+          <img src="img/sobre2.jpg" alt="Sobre-2">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contato container" id="contato">
-    <h1>Dúvidas?<br />Entre em contato</h1>
-    <form class="contato-form">
-      <input type="text" placeholder="Seu nome">
-      <input type="email" placeholder="Seu e-mail">
-      <textarea placeholder="Escreva aqui..." cols="30" rows="5"></textarea>
-      <button>Enviar</button>
-    </form>
-  </section>
+    <section class="combos container" id="combos">
+      <h1>Combos</h1>
+      <h3>Escolha um dos nossos combos ou <button class="btn-combo">crie seu combo!</button></h3>
+      <div class="combos-container">
+        <div class="combos-item red">
+          <a href="#">
+            <img src="img/combo1.jpg" alt="Combo Red">
+            <h2>Combo Red</h2>
+          </a>
+        </div>
 
+        <div class="combos-item orange">
+          <a href="#">
+            <img src="img/combo2.jpg" alt="Combo Orange">
+            <h2>Combo Orange</h2>
+          </a>
+        </div>
+
+        <div class="combos-item blue">
+          <a href="#">
+            <img src="img/combo3.jpg" alt="Combo Purple">
+            <h2>Combo Purple</h2>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="assinaturas" id="assinaturas">
+      <div class="container">
+        <h1>Planos de assinatura mensal</h1>
+        <div class="assinaturas-container">
+          <div class="assinatura-valor">
+            <h2>Seed</h2>
+            <span>R$ 49</span>
+            <ul>
+              <li>> Duas entregas no mês</li>
+              <li>> Escolha até dois combos</li>
+            </ul>
+            <button>Assinar</button>
+          </div>
+
+          <div class="assinatura-valor">
+            <h2>Fruit</h2>
+            <span>R$ 89</span>
+            <ul>
+              <li>> Quatro entregas no mês</li>
+              <li>> Escolha até quatro combos</li>
+              <li>> Brindes exclusivos</li>
+            </ul>
+            <button>Assinar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contato container" id="contato">
+      <h1>Dúvidas?<br />Entre em contato</h1>
+      <form class="contato-form">
+        <input type="text" placeholder="Seu nome">
+        <input type="email" placeholder="Seu e-mail">
+        <textarea placeholder="Escreva aqui..." cols="30" rows="5"></textarea>
+        <button>Enviar</button>
+      </form>
+    </section>
+  </main>
   <footer class="footer">
     <p>FreshFruits 🍉 All rights reserved.</p>
   </footer>
