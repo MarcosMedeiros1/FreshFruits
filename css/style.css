@@ -1,3 +1,4 @@
+/* Estilos gerais */
 html {
   scroll-behavior: smooth;
 }
@@ -7,6 +8,11 @@ html {
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 2.5rem;
+  margin: 0 10px;
+}
+
 /* Header Menu */
 .menu-bg {
   background-color: #fff;
@@ -14,27 +20,16 @@ html {
 
 .menu {
   padding: 15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
   align-items: center;
-}
-
-.menu a {
-  color: #000;
+  justify-content: space-around;
 }
 
 .menu-logo a {
   font-size: 2rem;
   font-weight: bold;
   margin-left: 10px;
-}
-
-.menu-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
 }
 
 .menu-nav a {
@@ -111,8 +106,6 @@ html {
 
 .sobre {
   padding: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .sobre-info {
@@ -121,7 +114,7 @@ html {
 
 .sobre-info h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0 5px;
 }
 
 .sobre-info p {
@@ -136,23 +129,9 @@ html {
   padding: 20px 0;
 }
 
-.combos h1 {
-  font-size: 2.5rem;
-  margin: 0 10px;
-}
-
 .combos p {
   font-weight: bold;
   margin: 0 10px 20px;
-}
-
-.combos-item h2 {
-  font-size: 2.5rem;
-  color: #fff;
-  padding: 15px;
-  position: absolute;
-  bottom: 1px;
-  z-index: 1;
 }
 
 .btn-combo {
@@ -180,6 +159,15 @@ html {
 .combos-item {
   margin: 10px;
   position: relative;
+}
+
+.combos-item h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 15px;
+  position: absolute;
+  bottom: 1px;
+  z-index: 1;
 }
 
 .combos-item::after {
@@ -211,11 +199,6 @@ html {
 .assinaturas {
   background-color: #f7f7f7;
   padding: 20px 0;
-}
-
-.assinaturas h1 {
-  font-size: 2.5em;
-  margin: 0 10px;
 }
 
 .assinatura-valor {
@@ -276,25 +259,19 @@ html {
   padding: 20px 0;
 }
 
-.contato h1 {
-  font-size: 2.5rem;
-  margin: 0 10px;
-}
-
 .contato span {
   font-size: 2rem;
   margin: 0 10px;
 }
 
 .contato-form {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .contato-form input,
 textarea {
-  width: 40vh;
   font-size: 1rem;
   border: 3px solid #c6f50f;
   padding: 10px;
@@ -305,7 +282,7 @@ textarea {
 
 /* Footer */
 .footer {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   background: #c6f50f;
@@ -318,6 +295,61 @@ textarea {
 }
 
 /* Responsividade */
+@media (min-width: 768px) {
+  /* Menu */
+  .menu {
+    grid-template-columns: 10fr 1fr;
+  }
 
-@media (max-width: 768px) {
+  .menu-logo a {
+    font-size: 3rem;
+  }
+
+  .menu-nav a {
+    font-size: 1.5rem;
+  }
+
+  .menu-nav ul {
+    top: 76px;
+  }
+
+  /* Sobre */
+  .sobre-info p {
+    margin-right: 20px;
+  }
+
+  /* Combos */
+  .combos p {
+    font-size: 1.25rem;
+  }
+
+  .combos-item h2 {
+    font-size: 3rem;
+  }
+
+  .combos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* Assinaturas */
+  .assinaturas-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .assinatura-valor {
+    display: grid;
+  }
+
+  /* Contato */
+  .contato-form input,
+  textarea {
+    font-size: 1.5rem;
+  }
+
+  /* Footer */
+  .footer p {
+    font-size: 1.5rem;
+  }
 }
