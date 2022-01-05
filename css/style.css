@@ -17,6 +17,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu a {
@@ -24,19 +25,16 @@ html {
 }
 
 .menu-logo a {
-  font-size: 2.25em;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 0 10px;
+  margin-left: 10px;
 }
 
 .menu-nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.menu-nav ul li + li {
-  margin-left: 10px;
+  gap: 0.5rem;
 }
 
 .menu-nav a {
@@ -47,16 +45,62 @@ html {
 }
 
 .menu-nav a:hover {
-  color: #000;
-  background-color: #c6f50f;
-  border-radius: 5px;
+  background-color: #f6f6f6;
 }
 
-@media screen and (max-width: 480px) {
-  .menu {
+/* Menu hamburguer */
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 810px) {
+  #btn-mobile {
+    display: block;
+  }
+
+  .menu-nav ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 68px;
+    right: 0px;
+    background-color: #fff;
+    z-index: 10;
+    transition: 0.5s;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  #nav-list.active {
+    height: fit-content;
+    visibility: visible;
+    overflow: auto;
+  }
+
+  .menu-nav a {
+    border-bottom: 1px solid #f7f7f7;
+  }
+
+  #btn-mobile {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  #hamburguer {
+    border-top: 2px solid #000;
+    width: 20px;
+  }
+
+  #hamburguer::after,
+  #hamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
   }
 }
 
@@ -66,61 +110,49 @@ html {
 }
 
 .sobre {
-  padding: 40px 0;
+  padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
 }
 
 .sobre-info {
-  flex: 2 1 300px;
   margin: 0 10px;
 }
 
 .sobre-info h1 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .sobre-info p {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 1.4;
   margin-bottom: 1em;
   color: #606060;
 }
 
-.sobre-img {
-  flex: 1 1 200px;
-  flex-wrap: nowrap;
-  margin: 10px;
-  max-width: 200px;
-}
-
 /* Combos */
 .combos {
-  margin: 40px auto;
-}
-
-.combos-container {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 20px 0;
 }
 
 .combos h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin: 0 10px;
 }
 
+.combos p {
+  font-weight: bold;
+  margin: 0 10px 20px;
+}
+
 .combos-item h2 {
-  font-size: 3.5em;
+  font-size: 2.5rem;
   color: #fff;
-  padding: 20px;
+  padding: 15px;
   position: absolute;
   bottom: 1px;
   z-index: 1;
-}
-
-.combos h3 {
-  margin: 0 10px 20px;
 }
 
 .btn-combo {
@@ -146,7 +178,6 @@ html {
 }
 
 .combos-item {
-  flex: 1 1 170px;
   margin: 10px;
   position: relative;
 }
@@ -171,77 +202,63 @@ html {
   border-image: linear-gradient(70deg, #ff0000, #ffd500) 1;
 }
 
-.blue {
+.purple {
   border-bottom: 8px solid #c6f50f;
   border-image: linear-gradient(110deg, #6200ff, #e32be3) 1;
 }
 
-/* Preço */
+/* Assinaturas */
 .assinaturas {
   background-color: #f7f7f7;
-}
-
-.assinaturas-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
 .assinaturas h1 {
   font-size: 2.5em;
   margin: 0 10px;
-  padding-top: 20px;
 }
 
 .assinatura-valor {
-  flex: 1;
   background-color: #fff;
   padding: 10px;
   margin: 20px 10px;
-  border: 5px solid #c6f50f;
+  border: 4px solid #c6f50f;
 }
 
 .assinatura-valor h2 {
-  font-size: 3em;
-  color: #000;
+  font-size: 2.5rem;
   text-align: center;
 }
 
-.assinatura-valor h2::before {
+.assinatura-valor h2::after {
   content: "";
   position: absolute;
-  width: 50px;
-  margin: 65px 30px 0;
+  width: 40px;
+  margin: 50px 0 0 -65px;
   border-top: 3px solid #a4a4a4;
 }
 
 .assinatura-valor span {
-  max-width: 300px;
   margin: 20px auto;
   display: block;
   text-align: center;
-  font-size: 3em;
+  font-size: 2.5rem;
 }
 
 .assinatura-valor ul {
-  max-width: 300px;
-  margin: 0 auto;
-  font-size: 1.25em;
+  margin: 0 30px;
+  font-size: 1.15rem;
   color: #7c7c7c;
 }
 
 .assinatura-valor li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .assinatura-valor button,
 .contato-form button {
-  margin: 20px auto;
-  font-size: 2em;
+  margin: 20px auto 10px;
+  font-size: 2rem;
   display: block;
   border-radius: 5px;
   padding: 10px 60px;
@@ -256,43 +273,51 @@ html {
 
 /* Contato */
 .contato {
-  padding: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  padding: 20px 0;
 }
 
 .contato h1 {
-  margin: 0 20px;
-  font-size: 2em;
+  font-size: 2.5rem;
+  margin: 0 10px;
+}
+
+.contato span {
+  font-size: 2rem;
+  margin: 0 10px;
 }
 
 .contato-form {
-  flex: 1;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
+  align-items: center;
 }
 
 .contato-form input,
 textarea {
-  flex: 1;
-  font-size: 1.25em;
+  width: 40vh;
+  font-size: 1rem;
   border: 3px solid #c6f50f;
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
   outline: none;
+  resize: none;
 }
 
 /* Footer */
 .footer {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: #c6f50f;
-  height: 100px;
+  height: 60px;
 }
 
 .footer p {
-  flex: 1;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.25rem;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
 }

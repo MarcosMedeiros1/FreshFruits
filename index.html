@@ -19,7 +19,10 @@
         <a href="index.html">FreshFruits</a>
       </div>
       <nav class="menu-nav">
-        <ul>
+        <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hamburguer"></span>
+        </button>
+        <ul id="nav-list" role="menu">
           <li><a href="#sobre">Sobre nós</a></li>
           <li><a href="produtos.html">Produtos</a></li>
           <li><a href="#combos">Combos</a></li>
@@ -34,23 +37,17 @@
     <section class="sobre-bg">
       <div class="sobre container" id="sobre">
         <div class="sobre-info">
-          <h1>Frutas frescas, livres de agrotóxicos</h1>
+          <h1>Frutas frescas,<br /> livres de agrotóxicos</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, odio eu tristique bibendum, ligula nunc sagittis augue, ac consequat turpis diam sit amet ante.
           </p>
-        </div>
-        <div class="sobre-img">
-          <img src="img/sobre1.jpg" alt="Sobre-1">
-        </div>
-        <div class="sobre-img">
-          <img src="img/sobre2.jpg" alt="Sobre-2">
         </div>
       </div>
     </section>
 
     <section class="combos container" id="combos">
       <h1>Combos</h1>
-      <h3>Escolha um dos nossos combos ou <button class="btn-combo">crie seu combo!</button></h3>
+      <p>Escolha um dos nossos combos ou <button class="btn-combo">crie seu combo!</button></p>
       <div class="combos-container">
         <div class="combos-item red">
           <a href="#">
@@ -66,7 +63,7 @@
           </a>
         </div>
 
-        <div class="combos-item blue">
+        <div class="combos-item purple">
           <a href="#">
             <img src="img/combo3.jpg" alt="Combo Purple">
             <h2>Combo Purple</h2>
@@ -77,7 +74,7 @@
 
     <section class="assinaturas" id="assinaturas">
       <div class="container">
-        <h1>Planos de assinatura mensal</h1>
+        <h1>Planos de assinatura</h1>
         <div class="assinaturas-container">
           <div class="assinatura-valor">
             <h2>Seed</h2>
@@ -103,8 +100,9 @@
       </div>
     </section>
 
-    <section class="contato container" id="contato">
-      <h1>Dúvidas?<br />Entre em contato</h1>
+    <section class="contato container">
+      <h1>Dúvidas?</h1>
+      <span>Entre em contato</span>
       <form class="contato-form">
         <input type="text" placeholder="Seu nome">
         <input type="email" placeholder="Seu e-mail">
@@ -118,6 +116,8 @@
   </footer>
 
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

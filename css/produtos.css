@@ -37,6 +37,28 @@
   margin-top: 10px;
 }
 
+/* Paginação */
+.paginacao {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.paginacao a {
+  /* color: black; */
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.ativo {
+  background-color: #c6f50f;
+}
+
+.paginacao a:hover:not(.ativo) {
+  background-color: #ddd;
+}
+
 @media screen and (min-width: 480px) {
   .produtos {
     display: grid;
