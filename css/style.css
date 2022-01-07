@@ -20,10 +20,9 @@ h1 {
 
 .menu {
   padding: 15px 0;
-  display: grid;
-  grid-template-columns: 5fr 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
 }
 
 .menu-logo a {
@@ -48,7 +47,7 @@ h1 {
   display: none;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 1000px) {
   #btn-mobile {
     display: block;
   }
@@ -156,8 +155,13 @@ h1 {
   transform: scaleY(1);
 }
 
+.combos-container {
+  display: grid;
+  gap: 10px;
+}
+
 .combos-item {
-  margin: 10px;
+  margin: 0 10px;
   position: relative;
 }
 
@@ -295,6 +299,7 @@ textarea {
 }
 
 /* Responsividade */
+/* Tablets */
 @media (min-width: 768px) {
   /* Menu */
   .menu {
@@ -302,15 +307,15 @@ textarea {
   }
 
   .menu-logo a {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .menu-nav a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .menu-nav ul {
-    top: 76px;
+    top: 68px;
   }
 
   /* Sobre */
@@ -325,6 +330,14 @@ textarea {
 
   .combos-item h2 {
     font-size: 3rem;
+  }
+
+  .combos-item {
+    margin: 0;
+  }
+
+  .combos-container {
+    margin: 0 10px;
   }
 
   .combos-container {
@@ -351,5 +364,32 @@ textarea {
   /* Footer */
   .footer p {
     font-size: 1.5rem;
+  }
+}
+
+/* Telas maiores */
+@media (min-width: 1000px) {
+  /* Menu */
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-nav a:hover {
+    background-color: #c6f50f;
+    border-radius: 5px;
+  }
+
+  .menu-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  /* Assinaturas */
+  .assinaturas-container {
+    /* grid-template-columns: 50vh 50vh; */
   }
 }
