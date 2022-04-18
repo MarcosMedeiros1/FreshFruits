@@ -51,11 +51,11 @@
   transition: 0.3s;
 }
 
-.ativo {
+.selected {
   background-color: #c6f50f;
 }
 
-.paginacao a:hover:not(.ativo) {
+.paginacao a:hover:not(.selected) {
   background-color: #ddd;
 }
 

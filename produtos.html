@@ -19,7 +19,10 @@
         <a href="index.html">FreshFruits</a>
       </div>
       <nav class="menu-nav">
-        <ul>
+        <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hamburguer"></span>
+        </button>
+        <ul id="nav-list" role="menu">
           <li><a href="index.html#sobre">Sobre nós</a></li>
           <li><a href="produtos.html">Produtos</a></li>
           <li><a href="index.html#combos">Combos</a></li>
@@ -31,8 +34,8 @@
   </header>
 
   <main class="container">
-    <section class="produtos">
-      <h1>Conheça nossos produtos</h1>
+    <section class="produtos" data-anime="">
+      <h1 data-anime>Conheça nossos produtos</h1>
 
       <div class="produto-item">
         <a href="#">
@@ -134,13 +137,14 @@
 
     <div class="paginacao">
       <a href="#">«</a>
-      <a class="ativo" href="#">1</a>
+      <a class="selected" href="#">1</a>
       <a href="#">2</a>
       <a href="#">3</a>
       <a href="#">»</a>
     </div>
   </main>
 
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>
